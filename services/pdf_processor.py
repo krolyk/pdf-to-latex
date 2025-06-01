@@ -9,7 +9,10 @@ class PDFProcessor:
         
     def pdf_to_images(self, pdf_path: str) -> list[Image.Image]:
         try:
-            return convert_from_path(pdf_path)
+            images = convert_from_path(pdf_path)
+            for i, img in enumerate(images):
+                img.save(f"temp/page_{i}.png")
+            return images
         except Exception as e:
             print(f"PDF conversion error: {e}")
             return []
