@@ -2,3 +2,5 @@ venv/
 .env
 temp/
 __pycache__/
+services/__pycache__/
+**/__pycache__/
