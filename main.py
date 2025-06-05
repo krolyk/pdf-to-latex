@@ -3,8 +3,8 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 import aiofiles
 import os
 
-from services.pdf_processor import PDFProcessor
-from services.ocr_service import OCRService
+from services import PDFProcessor
+from services import OCRService
 
 app = FastAPI()
 
